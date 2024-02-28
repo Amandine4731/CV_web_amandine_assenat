@@ -1,0 +1,437 @@
+:root {
+
+    /* colors */
+    --color-white: #FFFFFF;
+    --color-beige: #F0EFE9;
+    --color-light-grey: #E7E7E7;
+    --color-ink: #BCBCBC;
+    --color-dark-grey: #545252;
+    --color-black: #000000;
+    --color-shadow: rgba(0, 0, 0, 0.3);
+
+
+    /* fonts */
+    --font-h1: 'fit-wide', sans-serif;
+    --font-size-h1: 11vw;
+    --font-weight-h1: 400;
+
+    --font-h2: 'Shrikhand', serif;
+    --font-size-h2: 18px;
+
+    --font-h3: 'Montserrat', sans-serif;
+    --font-size-h3: 14px;
+    --font-weight-h3: 600;
+
+    --font-h4: 'Montserrat', sans-serif;
+    --font-size-h4: 12px;
+
+    --font-p: "Oxanium", sans-serif;
+    --font-size-p: 15px;
+
+    --font-h5: 'Montserrat', sans-serif;
+    --font-size-h5: 10px;
+
+    /* borders */
+    --border-radius-10: 10px;
+    --box-shadow: 3px 3px 5px var(--color-shadow);
+}
+
+body {
+    background-color: var(--color-light-grey);
+}
+
+.wrapper {
+    margin: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.wrapper>* {
+    padding: 10px;
+    padding: 10px;
+    flex: 1 100%;
+    
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 96%;
+    z-index: 1000;
+    max-width: 1000px;
+    border-bottom: 1px solid var(--color-dark-grey);
+    border-left: 1px solid var(--color-dark-grey);
+    border-right: 1px solid var(--color-dark-grey);
+    border-radius: 0px 0px var(--border-radius-10) var(--border-radius-10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--color-light-grey);
+}
+
+.header .portfolio-logo #portfolio-h1 {
+    font-family: var(--font-h1);
+    font-weight: var(--font-weight-h1);
+    font-size: var(--font-size-h1);
+    background-image: url(/images/eyes.jpg);
+    background-size: cover;
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    margin-bottom: -6%;
+    margin-top: -8%;
+    letter-spacing: 1px;
+}
+
+.header .navigation .navbar-menu .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.header .navigation .navbar-menu .nav-links li {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: 1px solid var(--color-dark-grey);
+}
+
+.header .navigation .navbar-menu .nav-links li:last-child {
+    border-right: none;
+}
+
+.header .navigation .navbar-menu .nav-links li a {
+    text-decoration: none;
+    font-family: var(--font-h3);
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-h3);
+    color: var(--color-black);
+    transition: all 0.3s ease 0s;
+}
+
+.header .navigation .navbar-menu .nav-links li a:hover {
+    color: #ff00ff;
+}
+
+
+.header .forme {
+    position: absolute;
+    background-color: var(--color-light-grey);
+    padding-top: 2px;
+    padding-left: 18px;
+    padding-right: 17px;
+    padding-bottom: 0;
+    margin: 0;
+    bottom: -1px;
+}
+
+main {
+    margin-top: 100px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.section-parcours .parcours-pro {
+    height: auto;
+}
+
+.section-parcours .timeline {
+    background-color: transparent;
+    border-left: 1px solid var(--color-dark-grey);
+    border-right: 1px solid var(--color-dark-grey);
+    border-top: 1px solid var(--color-light-grey);
+    margin: -1px;
+    z-index: 1;
+    height: auto;
+}
+
+.section-parcours .parcours-scolaire {
+    height: auto;
+}
+
+.section-parcours h2 {
+    margin-top: 150px;
+    margin-bottom: -5px;
+    padding: 0;
+    font-family: var(--font-h2);
+    font-size: var(--font-size-h2);
+    color: var(--color-black);
+}
+
+.section-parcours h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: var(--font-h3);
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-h3);
+    color: var(--color-black);
+}
+
+@media all and (min-width: 800px) {
+    .section-parcours{
+        margin: -0px;
+        padding: 0;
+        display: flex;
+        flex-flow: row wrap;
+        text-align: center;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section-parcours .parcours-pro {
+        flex: 15;
+        order: 0;
+    }
+
+
+    .section-parcours .parcours-timeline {
+        order: 1;
+        flex: 1;
+    }
+
+    .section-parcours .parcours-scolaire {
+        flex: 15;
+        order: 2;
+    }
+}
+
+
+@media all and (max-width: 799px) {
+    .section-parcours .timeline {
+        display: none;
+    }
+
+    .header .forme {
+        display: none;
+    }
+}
+
+@media all and (min-width: 600px) {
+    .section-parcours div {
+        flex: 1;
+    }
+}
+
+.posters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.posters .poster-pro {
+    background-color: var(--color-ink);
+    border-radius: var(--border-radius-10) 0px 0px var(--border-radius-10);
+    margin-bottom: 32px;
+}
+
+
+.posters .poster-scolaire {
+    margin-bottom: 32px;
+}
+
+.posters img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 12px;
+    width: 68%;
+    border-radius: var(--border-radius-10);
+    box-shadow: var(--box-shadow);
+}
+.posters img:hover {
+    transform: scale(1.03);
+    transition: all .3s ease-in-out;
+}
+
+.posters .imagesx2 {
+    display: flex;
+    margin-right: 20px;
+    margin-left: 8px;
+}
+
+.posters .poster-prox2 img{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    width: 42%;
+    border-radius: var(--border-radius-10);
+    box-shadow: var(--box-shadow);
+}
+
+
+
+.posters .poster-prox2 img:hover {
+    transform: scale(1.26);
+    transition: all .3s ease-in-out;
+}
+
+
+
+.posters #pro {
+    margin-left: -60px;
+    padding-bottom: 10px;
+    font-family: var(--font-h5);
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-h5);
+    color: var(--color-black);
+}
+
+.posters #scolaire {
+    margin-left: 60px;
+    padding-bottom: 10px;
+    font-family: var(--font-h5);
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-h5);
+    color: var(--color-black);
+}
+
+.timeline .start {
+    height: 214px;
+    margin-top: 0;
+    border-bottom: 1px solid var(--color-dark-grey);
+}
+
+.timeline .end {
+    height: 120px;
+    margin-bottom: 0;
+}
+
+.timeline .d2016-2020,
+.timeline .d2020-2021 {
+    height: 530px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-ink);
+}
+
+.timeline .d2022-2023 {
+    height: 530px;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline .d2023 {
+    height: 530px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-ink);
+}
+
+.timeline .d2016,
+.timeline .d2017,
+.timeline .d2018,
+.timeline .d2019,
+.timeline .d2020,
+.timeline .d2021,
+.timeline .d2022,
+.timeline .d2023 {
+    text-align: right;
+    border-bottom: 1px solid var(--color-dark-grey);
+    margin: 0;
+    flex: 1;
+}
+
+.timeline .d2019,
+.timeline .d2021,
+.timeline .d2023 {
+    border-bottom: 1px solid var(--color-dark-grey);
+    border-style: inset;
+}
+
+.timeline h3 {
+    transform: rotate(270deg);
+
+    
+    margin-top: 20px;
+}
+
+.timeline .graduation {
+  background-color: var(--color-dark-grey);
+  height: 32px;
+  padding:4px;
+}
+
+.timeline .graduation i {
+    color: white;
+}
+
+
+.arrow-right {
+    position: absolute;
+    z-index: -50;
+    height: 68px;
+    width: 100px;
+    border-bottom: 2px dotted var(--color-dark-grey);
+    border-right: 2px dotted var(--color-dark-grey);
+    margin-top: -50px;   
+}
+
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 418px;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front img{
+    width: 100%;
+    margin: 0;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+    border-radius: var(--border-radius-10);
+    box-shadow: var(--box-shadow);
+    background-color: var(--color-beige);
+    color: white;
+    transform: rotateY(180deg);
+  }
