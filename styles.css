@@ -19,14 +19,14 @@
     --font-size-h2: 18px;
 
     --font-h3: 'Montserrat', sans-serif;
-    --font-size-h3: 14px;
+    --font-size-h3: 15px;
     --font-weight-h3: 600;
 
     --font-h4: 'Montserrat', sans-serif;
-    --font-size-h4: 12px;
+    --font-size-h4: 14px;
 
     --font-p: "Oxanium", sans-serif;
-    --font-size-p: 15px;
+    --font-size-p: 14px;
 
     --font-h5: 'Montserrat', sans-serif;
     --font-size-h5: 10px;
@@ -130,8 +130,8 @@ body {
     position: absolute;
     background-color: var(--color-light-grey);
     padding-top: 2px;
-    padding-left: 18px;
-    padding-right: 17px;
+    padding-left: 19px;
+    padding-right: 18px;
     padding-bottom: 0;
     margin: 0;
     bottom: -1px;
@@ -235,52 +235,38 @@ main {
     background-color: var(--color-ink);
     border-radius: var(--border-radius-10) 0px 0px var(--border-radius-10);
     margin-bottom: 32px;
+    min-height: 530px;
+    max-height: 530px;
+    width: 100%;
+    padding-top: 22px;
 }
 
 
 .posters .poster-scolaire {
     margin-bottom: 32px;
+    padding-top: 22px;
 }
 
 .posters img {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 15px;
-    margin-bottom: 12px;
-    width: 68%;
+    width: 321.25px;
+    height: 468.2px;
     border-radius: var(--border-radius-10);
     box-shadow: var(--box-shadow);
-}
-.posters img:hover {
-    transform: scale(1.03);
-    transition: all .3s ease-in-out;
 }
 
 .posters .imagesx2 {
     display: flex;
-    margin-right: 20px;
-    margin-left: 8px;
-}
-
-.posters .poster-prox2 img{
-    margin-top: 15px;
-    margin-bottom: 5px;
-    width: 42%;
-    border-radius: var(--border-radius-10);
-    box-shadow: var(--box-shadow);
-}
-
-
-
-.posters .poster-prox2 img:hover {
-    transform: scale(1.26);
-    transition: all .3s ease-in-out;
+    margin-bottom: 32px;
+    padding-top: 22px;
 }
 
 
 
 .posters #pro {
-    margin-left: -60px;
+    margin-top: 15px;
+    margin-left: -50px;
     padding-bottom: 10px;
     font-family: var(--font-h5);
     font-size: var(--font-size-h5);
@@ -289,7 +275,8 @@ main {
 }
 
 .posters #scolaire {
-    margin-left: 60px;
+    margin-top: 15px;
+    margin-left: 50px;
     padding-bottom: 10px;
     font-family: var(--font-h5);
     font-size: var(--font-size-h5);
@@ -298,7 +285,7 @@ main {
 }
 
 .timeline .start {
-    height: 214px;
+    height: 216px;
     margin-top: 0;
     border-bottom: 1px solid var(--color-dark-grey);
 }
@@ -370,10 +357,237 @@ main {
 
 .arrow-right {
     position: absolute;
-    z-index: -50;
-    height: 68px;
-    width: 100px;
+    z-index: -500;
+    height: 52px;
+    width: 110px;
     border-bottom: 2px dotted var(--color-dark-grey);
     border-right: 2px dotted var(--color-dark-grey);
-    margin-top: -50px;   
+    margin-top: -35px;
+    margin-left: -80px;   
+}
+
+.container {
+    box-sizing: border-box;
+}
+
+.card {
+    margin: 0 auto;
+    width: 321.25px;
+    height: 468.2px;
+    transform-style: preserve-3d;
+}
+
+.container:hover .card {
+    cursor: pointer;
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transition: transform 200ms;
+}
+
+.card-front,
+.card-back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: var(--border-radius-10);
+    box-shadow: var(--box-shadow);
+}
+
+.img-marches-bazens {
+    background-image: url(images/posters/marches_bazens.jpg);
+}
+.img-em-deco {
+    background-image: url(images/posters/em_deco.jpg);
+}
+
+.img-bac-es {
+    background-image: url(images/posters/bac_es.jpg);
+}
+
+.img-bts-erpc {
+    background-image: url(images/posters/bts_erpc.jpg);
+}
+
+.img-holberton {
+    background-image: url(images/posters/holberton.jpg);
+}
+
+
+.card-front {
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-back {
+    background-color: var(--color-beige);
+    transform: rotateY(180deg);
+    padding: 20px;
+    text-align: left;
+    
+}
+
+.card-back-h3-icon {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -5px;
+}
+
+.card-back-icon {
+    text-align: end;
+}
+
+.card-back-icon i:hover{
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transition: transform 200ms;
+}
+
+.card-back h3{
+    margin-bottom: 0px;
+    font-family: var(--font-h3);
+    color: var(--color-black);
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-h3);
+}
+
+.card-back h4 {
+    margin-bottom: 20px;
+    font-family: var(--font-h4);
+    color: var(--color-black);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-h4);
+}
+
+.card-back p {
+    margin-bottom: 10px;
+    font-family: var(--font-p);
+    color: var(--color-black);
+    font-size: var(--font-size-p);
+    font-weight: var(--font-weight-p);
+}
+
+.card-back:hover {
+    -webkit-transform: scale(1.03) rotateY(180deg);
+    -moz-transform: scale(1.03) rotateY(180deg);
+    -ms-transform: scale(1.03) rotateY(180deg);
+    transition: transform 200ms;
+}
+.container .card.flip {
+    transform: rotateY(180deg);
+}
+
+.containerx2 {
+    box-sizing: border-box;
+}
+
+.cardx2 {
+    margin: 0 auto;
+    width: 229.128px;
+    height: 333.924px;
+    transform-style: preserve-3d;
+    transition: transform 200ms;
+}
+
+.containerx2:hover .cardx2 {
+    cursor: pointer;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transition: transform 200ms;
+}
+
+.card-frontx2,
+.card-backx2 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: var(--border-radius-10);
+    box-shadow: var(--box-shadow);
+    
+}
+
+.caca {
+    z-index: 80;
+    border-right: 6px solid var(--color-light-grey);
+}
+.caca:hover {
+    z-index: 90;
+}
+
+.pipi {
+   z-index: 80;
+   border-left: 6px solid var(--color-light-grey);
+}
+
+.pipi:hover {
+    z-index: 90;
+}
+
+.card-frontx2 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-backx2 {
+    background-color: var(--color-beige);
+    transform: rotateY(180deg);
+}
+
+.card-backx2:hover {
+    transform: scale(1.2) rotateY(180deg);
+    transition: transform 200ms;
+}
+.containerx2 .cardx2.flip {
+    transform: rotateY(180deg);
+}
+.img-poste-pic {
+    
+    background-image: url(images/posters/poste_pic.jpg);
+
+}
+
+.img-made-in-tracker {
+    background-image: url(images/posters/made_in_tracker.jpg);
+}
+
+
+/* section à propos */
+
+.wrapper {
+    margin: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.wrapper>* {
+    padding: 10px;
+    padding: 10px;
+    flex: 1 100%;
+    
+}
+
+.section-a-propos {
+    display: flex;
+    width: 96%;
+    height: 200px;
+    max-width: 1000px;
+    border: 1px solid var(--color-dark-grey);
+    border-radius:var(--border-radius-10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--color-light-grey);
 }

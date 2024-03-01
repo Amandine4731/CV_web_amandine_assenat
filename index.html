@@ -11,6 +11,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script>
+
+function rotateCard(cardClass) {
+  var card = document.querySelector('.' + cardClass);
+    card.classList.toggle('flip');
+  var cards = document.querySelectorAll('.card');
+  cards.forEach(function(card) {
+    var isClickedCard = card.classList.contains(cardClass);
+        card.classList.toggle('flip', isClickedCard);
+    });
+  }
+
+
+</script>
 </head>
 <body>
     <div class="wrapper">
@@ -48,17 +63,67 @@
               <h3>Expériences professionnelles</h3>
               <div class="posters">
                 <div class="poster-pro">
-                  <img src="images/posters/marches_bazens.jpg" alt="Poster Marchés Bazens">
+                  <div class="container" onclick="rotateCard('card1')">
+                    <div class="card card1">
+                      <div class="card-front img-marches-bazens"></div>
+                      <div class="card-back">
+                        <div class="card-back-h3-icon">
+                          <div class="card-back-h3">
+                          <h3>Lorem ipsum</h3>
+                          </div>
+                        </div>
+                        <h4>Lorem ipsum</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                    </div>
+                  </div>
                   <h5 id="pro">Appuyez sur le poster pour afficher les informations</h5>
                 </div>
                 <div class="poster-pro">
-                  <img src="images/posters/em_deco.jpg" alt="Poster Em'deco">
+                  <div class="container" onclick="rotateCard('card2')">
+                    <div class="card card2">
+                      <div class="card-front img-em-deco"></div>
+                      <div class="card-back">
+                        <div class="card-back-h3-icon">
+                          <div class="card-back-h3">
+                          <h3>Lorem ipsum</h3>
+                          </div>
+                          <div class="card-back-icon">
+                            <a href="">
+                              <i class="material-symbols-outlined">description</i>
+                            </a>
+                            <a href="">
+                              <i class="material-symbols-outlined">arrow_right_alt</i>
+                            </a>
+                          </div>
+                        </div>
+                        <h4>Lorem ipsum</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                    </div>
+                  </div>
                   <h5 id="pro">Appuyez sur le poster pour afficher les informations</h5>
                 </div>
                 <div class="poster-prox2">
                   <div class="imagesx2">
-                    <img id="poster1" src="images/posters/poste_pic.jpg" alt="Poster Poste PIC">
-                    <img id="poster2" src="images/posters/made_in_tracker.jpg" alt="Poster Made In Tracker">
+                    <div class="container containerx2 caca" onclick="rotateCard('card6')">
+                      <div class="card cardx2 card6">
+                        <div class="card-front card-frontx2 img-poste-pic"></div>
+                          <div class="card-back card-backx2">
+                            <h3>Lorem ipsum</h3>
+                            <p>Lorem ipsum</p>
+                          </div>
+                        </div>
+                      </div>
+                    <div class="container containerx2 pipi" onclick="rotateCard('card7')">
+                      <div class="card cardx2 card7">
+                        <div class="card-front card-frontx2 img-made-in-tracker"></div>
+                          <div class="card-back card-backx2">
+                            <h3>Lorem ipsum</h3>
+                            <p>Lorem ipsum</p>
+                          </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -113,22 +178,87 @@
               <h3>Mes diplômes</h3>
               <div class="posters">
                 <div class="poster-scolaire">
-                  <img src="images/posters/bac_es.jpg" alt="Poster Bac ES">
+                  <div class="container" onclick="rotateCard('card3')">
+                      <div class="card card3">
+                        <div class="card-front img-bac-es"></div>
+                        <div class="card-back">
+                          <div class="card-back-h3-icon">
+                            <div class="card-back-h3">
+                            <h3>Lorem ipsum</h3>
+                            </div>
+                            <div class="card-back-icon">
+                              <a href="">
+                                <i class="material-symbols-outlined">description</i>
+                              </a>
+                              <a href="">
+                                <i class="material-symbols-outlined">arrow_right_alt</i>
+                              </a>
+                            </div>
+                          </div>
+                          <h4>Lorem ipsum</h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                      </div>
+                    </div>
                   <h5 id="scolaire">Appuyez sur le poster pour afficher les informations</h5>
                   <div class="arrow-right arrow-bac-es"></div>
                 </div>
                 <div class="poster-scolaire">
-                  <img src="images/posters/bts_erpc.jpg" alt="Poster BTS ERPC">
+                  <div class="container card4" onclick="rotateCard('card4')">
+                    <div class="card card4">
+                      <div class="card-front img-bts-erpc"></div>
+                      <div class="card-back">
+                        <div class="card-back-h3-icon">
+                          <div class="card-back-h3">
+                          <h3>Lorem ipsum</h3>
+                          </div>
+                          <div class="card-back-icon">
+                            <a href="">
+                              <i class="material-symbols-outlined">description</i>
+                            </a>
+                            <a href="">
+                              <i class="material-symbols-outlined">arrow_right_alt</i>
+                            </a>
+                          </div>
+                        </div>
+                        <h4>Lorem ipsum</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                    </div>
+                  </div>
                   <h5 id="scolaire">Appuyez sur le poster pour afficher les informations</h5>
                   <div class="arrow-right arrow-bts-erpc"></div>
                 </div>
                 <div class="poster-scolaire">
-                  <img src="images/posters/holberton.jpg" alt="Poster Holberton">
+                  <div class="container card5" onclick="rotateCard('card5')">
+                    <div class="card card5">
+                      <div class="card-front img-holberton"></div>
+                      <div class="card-back">
+                        <div class="card-back-h3-icon">
+                          <div class="card-back-h3">
+                          <h3>Lorem ipsum</h3>
+                          </div>
+                          <div class="card-back-icon">
+                            <a href="">
+                              <i class="material-symbols-outlined">description</i>
+                            </a>
+                            <a href="">
+                              <i class="material-symbols-outlined">arrow_right_alt</i>
+                            </a>
+                          </div>
+                        </div>
+                        <h4>Lorem ipsum</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                    </div>
+                  </div>
                   <h5 id="scolaire">Appuyez sur le poster pour afficher les informations</h5>
                   <div class="arrow-right arrow-holberton"></div>
                 </div>
               </div>
             </div>
+          </section>
+          <section class="section-a-propos">
           </section>
         </main>
     </div>
