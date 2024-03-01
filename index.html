@@ -12,19 +12,37 @@
 <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 <script type="text/javascript" src="jquery-3.3.1.js"></script>
+
 <script>
-
-function rotateCard(cardClass) {
-  var card = document.querySelector('.' + cardClass);
-    card.classList.toggle('flip');
-  var cards = document.querySelectorAll('.card');
-  cards.forEach(function(card) {
-    var isClickedCard = card.classList.contains(cardClass);
-        card.classList.toggle('flip', isClickedCard);
+  document.addEventListener('DOMContentLoaded', function () {
+    var containers = document.querySelectorAll('.container');
+    var flippedCard = null;
+  
+    containers.forEach(function (container) {
+      var card = container.querySelector('.card');
+  
+      container.addEventListener('click', function () {
+        flipCard(card);
+      });
+   
+      var cardBack = container.querySelector('.card-back');
+      cardBack.addEventListener('click', function (event) {
+  
+        event.stopPropagation();
+  
+        flipCard(card);
+      });
     });
-  }
-
-
+   
+    function flipCard(card) {
+      if (flippedCard && flippedCard !== card.parentElement) {
+        flippedCard.querySelector('.card').classList.remove('flip');
+      }
+  
+      card.classList.toggle('flip');
+      flippedCard = card.parentElement;
+    }
+  });
 </script>
 </head>
 <body>

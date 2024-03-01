@@ -291,6 +291,7 @@ main {
 }
 
 .timeline .end {
+    border-bottom: 2px solid var(--color-light-grey);
     height: 120px;
     margin-bottom: 0;
 }
@@ -561,20 +562,6 @@ main {
 
 /* section à propos */
 
-.wrapper {
-    margin: 10px;
-    display: flex;
-    flex-flow: row wrap;
-    text-align: center;
-}
-
-.wrapper>* {
-    padding: 10px;
-    padding: 10px;
-    flex: 1 100%;
-    
-}
-
 .section-a-propos {
     display: flex;
     width: 96%;
@@ -591,3 +578,5 @@ main {
     margin-right: auto;
     background-color: var(--color-light-grey);
 }
+
+
