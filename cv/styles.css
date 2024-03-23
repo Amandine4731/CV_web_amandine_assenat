@@ -3,7 +3,7 @@
     /* colors */
     --color-white: #FFFFFF;
     --color-beige: #F0EFE9;
-    --color-light-grey: #E7E7E7;
+    --color-light-grey: #f7f7f7;
     --color-ink: #BCBCBC;
     --color-dark-grey: #545252;
     --color-black: #000000;
@@ -382,12 +382,18 @@ main {
 .card2:hover,
 .card3:hover,
 .card4:hover,
-.card5:hover {
+.card5:hover,
+.card6:hover,
+.card7:hover,
+.card8:hover,
+.card9:hover,
+.card10:hover,
+.card11:hover {
     cursor: pointer;
-    -webkit-transform: scale(1.03);
-    -moz-transform: scale(1.03);
-    -ms-transform: scale(1.03);
-    transition: transform 200ms;
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transition: transform 300ms;
 }
 
 
@@ -672,7 +678,10 @@ main {
   border-radius: 8px;
   scroll-behavior: smooth;
   scrollbar-width: none;
-  padding: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .carousel::-webkit-scrollbar {
@@ -698,7 +707,7 @@ main {
 }
 .carousel .card {
   scroll-snap-align: start;
-  height: 320px;
+  height: 300px;
   width: 100%;
   list-style: none;
   cursor: pointer;
@@ -735,8 +744,8 @@ main {
 }
 
 .card .a-propos-photo {
-  width: 100%;
-  height: 100%;
+  width: 125%;
+  height: 128%;
   object-fit: cover;
   border-radius: 10px;
   z-index: 0;
@@ -1024,48 +1033,101 @@ ol {
     justify-content: center;
 }
 
-
-.type-projets {
+.types-projets {
+    width: 100%;
+    max-width: 1100px;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-direction: row;
-    width: 100%;
+    position: absolute;
 }
 
-.projet-design-graphique,
-.projet-3d,
-.projet-web-design {
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
-    border-bottom: solid 2px var(--color-ink);
+.types-projets .projet-design-graphique,
+.types-projets .projet-3d,
+.types-projets .projet-web-design,
+.types-projets .projet-1,
+.types-projets .projet-2 {
+    height: 20px;
+    margin-top: -35px;
     font-family: var(--font-h5);
     font-size: var(--font-size-h5);
     font-weight: var(--font-weight-h5);
     color: var(--color-black);
+    border-bottom: solid 2px var(--color-ink);
+    padding-bottom: 20px;
+    position: relative;
+    margin-right: 5px;
+    margin-left: 5px;  
+}
+
+#input-1:checked ~ .types-projets .projet-design-graphique ,
+#input-2:checked ~ .types-projets .projet-design-graphique,
+#input-3:checked ~ .types-projets .projet-3d ,
+#input-4:checked ~ .types-projets .projet-3d,
+#input-5:checked ~ .types-projets .projet-web-design ,
+#input-6:checked ~ .types-projets .projet-web-design,
+#input-7:checked ~ .types-projets .projet-1 ,
+#input-8:checked ~ .types-projets .projet-1,
+#input-9:checked ~ .types-projets .projet-2 ,
+#input-10:checked ~ .types-projets .projet-2 {
+    width: 43%;
+    transition: 0.7s ease;
+    padding-bottom: 27px;
+    font-family: var(--font-h3);
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-h3);
+    margin-top: -45px;
+}
+
+.types-projets .projet-design-graphique {
     width: 13%;
 }
 
-.image-gallery-projets #input-1:checked  {
-    width: 42.8%;
-    transition: 0.5s ease-in;
+#input-1:checked ~ .types-projets .projet-design-graphique ,
+#input-2:checked ~ .types-projets .projet-design-graphique  {
     color: #00C092;
-    border-bottom: solid 5px #00C092;
+    border-bottom: solid 8px #00C092;
 }
 
-.overlay {
-    width: 100px;
-    height: 100px;
-    background-color: blue; /* Couleur d'overlay initiale */
-    position: absolute;
+.types-projets .projet-3d {
+    width: 13%;
+}
 
-  }
+#input-3:checked ~ .types-projets .projet-3d ,
+#input-4:checked ~ .types-projets .projet-3d  {
+    color: #FFBBAB;
+    border-bottom: solid 8px #FFBBAB;
+}
+.types-projets .projet-web-design {
+    width: 13%;
+}
 
-  /* Styles pour l'overlay lorsque l'input est coché */
-  #input-1:checked ~ .overlay {
-    opacity: 0.5; /* Opacité de l'overlay lorsque l'input est coché */
-    background-color: red; /* Couleur de l'overlay lorsque l'input est coché */
-  }
+#input-5:checked ~ .types-projets .projet-web-design ,
+#input-6:checked ~ .types-projets .projet-web-design  {
+    color: #F8DE65;
+    border-bottom: solid 8px #F8DE65;
+}
+.types-projets .projet-1 {
+    width: 13%;
+}
+
+#input-7:checked ~ .types-projets .projet-1 ,
+#input-8:checked ~ .types-projets .projet-1  {
+    color: #FB8960;
+    border-bottom: solid 8px #FB8960;
+}
+.types-projets .projet-2 {
+    width: 13%;
+}
+
+#input-9:checked ~ .types-projets .projet-2 ,
+#input-10:checked ~ .types-projets .projet-2  {
+    color: #F84157;
+    border-bottom: solid 8px #F84157;
+}
 
 .slider_img {
     background-size: auto 100%;
@@ -1137,9 +1199,6 @@ ol {
     border-radius: var(--border-radius-10);
 }
 
-.label-1 {
-    background-color: #F84157;
-}
 .section-projets {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -1165,6 +1224,7 @@ ol {
     padding-right: 5%;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 30px;
 }
 
 .title-projets h2 {
@@ -1185,7 +1245,7 @@ ol {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100%;
+    width: 45%;
     max-width: 1100px;
     padding-left: 5%;
     padding-right: 5%;
@@ -1226,14 +1286,45 @@ ol {
     font-weight: var(--font-weight-h4);
 }
 
-.vertical-line-contact {
-    margin-left: 70px;
-    height: auto;
-    background-color: var(--color-dark-grey);
-    width: 0.5px;
+.card-qrcode-contact-front{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 300px;
+    background-color: var(--color-ink);
+    border: 1px solid var(--color-ink);
+    border-radius: var(--border-radius-10);
+    box-shadow: var(--box-shadow);
+    position: absolute;
 }
 
-.qrcode-img-contact {
-    height: 150px;
-    width: 150px;
+.card-qrcode-contact-front h5{
+    font-family: var(--font-h5);
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-h5);
+    color: var(--color-black);
+}
+
+.card-qrcode-contact-front:hover {
+    background-color: transparent;
+
+}
+
+
+.card-qrcode-contact-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 300px;
+    background-color: #e5e5e5;
+    border: 1px solid var(--color-ink);
+    border-radius: var(--border-radius-10);
+    box-shadow: var(--box-shadow);
+}
+
+.card-qrcode-contact-back i{
+    font-size: 150px;
+    color: var(--color-ink);
 }
